@@ -77,3 +77,9 @@ eslint-plugin-jsx-a11y eslint-plugin-import eslint-config-prettier eslint-config
 npm install rsuite@4.10.2
 
 npm install sass rsuite@4.10.2 react-router@5.2.0 react-router-dom@5.2.0
+
+npm install -g firebase
+
+firebase login
+
+firebase init
