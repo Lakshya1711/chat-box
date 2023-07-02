@@ -6,7 +6,7 @@ import { auth, database } from '../misc/firebase';
 const SignIn = () => {
   const signInWithProvider = async provider => {
     try {
-      const { additionalUserInfo, user } = await auth.signInwithPopup(provider);
+      const { additionalUserInfo, user } = await auth.signInWithPopup(provider);
       if (additionalUserInfo.isNewUser) {
         database.ref(`/profiles/${user.uid}`).set({
           name: user.displayName,
@@ -41,7 +41,7 @@ const SignIn = () => {
                   <Icon icon="facebook" /> Continue with Facebook
                 </Button>
                 <Button block color="green" onClick={onGoogleSignIn}>
-                  <Icon icon="Google" /> Continue with Google
+                  <Icon icon="google" /> Continue with Google
                 </Button>
               </div>
             </Panel>
