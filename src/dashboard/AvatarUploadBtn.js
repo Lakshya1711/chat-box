@@ -68,15 +68,13 @@ const AvatarUploadBtn = () => {
       setIsLoading(false);
       Alert.error(err.message, 4000);
     }
-    canvas.toBlob();
   };
   return (
     <div className="mt-3 text-center">
       <ProfileAvatar
-        scr={profile.avatar}
+        src={profile.avatar}
         name={profile.name}
-        className="width-200 height-200
-        img-fullsize font-huge"
+        className="width-200 height-200 img-fullsize font-huge"
       />
       <div>
         <label
@@ -87,7 +85,7 @@ const AvatarUploadBtn = () => {
           <input
             id="avatar-upload"
             type="file"
-            className="d-name"
+            className="d-none"
             accept={fileInputTypes}
             onChange={onFileInputChange}
           />
@@ -113,8 +111,8 @@ const AvatarUploadBtn = () => {
           </Modal.Body>
           <Modal.Footer>
             <Button
-              block
               appearance="ghost"
+              block
               onClick={onUploadClick}
               disabled={isLoading}
             >
