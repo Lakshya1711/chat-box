@@ -84,8 +84,8 @@ firebase login
 
 firebase init
 
-In the next video, we are going to install an npm package that may cause some problems and produce Webpack Uncaught ReferenceError: babelHelpers is not defined error.
+npm install react-avatar-editor
+(for Avatar editing features)
 
-If you will experience this issue please don't panic. This is an issue related to react-avatar-editor package.
-
-Please uninstall the package by running npm uninstall react-avatar-editor and reinstall it with a lower version npm install react-avatar-editor@11.0.7
+npm install timeago-react
+(for updated time per message)
