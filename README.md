@@ -89,3 +89,6 @@ npm install react-avatar-editor
 
 npm install timeago-react
 (for updated time per message)
+
+npm install use-context-selector
+(for Context Api)
