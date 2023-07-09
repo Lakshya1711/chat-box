@@ -12,7 +12,7 @@ import {
 } from 'rsuite';
 import { useModelState } from '../misc/custom-hooks';
 import firebase from 'firebase/app';
-import { database } from '../misc/firebase';
+import { auth, database } from '../misc/firebase';
 const { StringType } = Schema.Types;
 const model = Schema.Model({
   name: StringType().isRequired('Chat name is Required'),
@@ -40,6 +40,9 @@ const CreateRoomBtnModal = () => {
     const newRoomdata = {
       ...formValue,
       createdAt: firebase.database.ServerValue.TIMESTAMP,
+      admins: {
+        [auth.currentUser.uid]: true,
+      },
     };
     try {
       await database.ref('rooms').push(newRoomdata);
