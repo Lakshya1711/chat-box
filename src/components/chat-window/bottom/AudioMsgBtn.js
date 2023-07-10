@@ -29,7 +29,7 @@ const AudioMsgBtn = ({ afterUpload }) => {
           url: await snap.ref.getDownloadURL(),
         };
         setIsUploading(false);
-        afterUpload(file);
+        afterUpload([file]);
       } catch (error) {
         setIsUploading(false);
         Alert.error(error.message);

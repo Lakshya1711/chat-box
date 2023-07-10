@@ -31,7 +31,8 @@ const Bottom = () => {
   }, []);
 
   const onSendClick = async () => {
-    if (input.trim() == '') {
+    if (input.trim() === '') {
+      Alert.warning('Please enter a message');
       return;
     }
     const msgData = assembleMessage(profile, chatId);

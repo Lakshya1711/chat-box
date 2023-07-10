@@ -22,7 +22,7 @@ const renderFileMessage = file => {
     return (
       <audio controls>
         <source src={file.url} type="audio/mp3" />
-        your Browser does not support Audio.
+        Your browser does not support the audio element.
       </audio>
     );
   }
