@@ -73,7 +73,7 @@ const Bottom = () => {
         msgData.file = file;
 
         const messageId = database.ref('messages').push().key;
-        updates[`/messageId/${messageId}`] = msgData;
+        updates[`/messages/${messageId}`] = msgData;
       });
       const lastMsgId = Object.keys(updates).pop();
       updates[`/rooms/${chatId}/lastMessage`] = {
